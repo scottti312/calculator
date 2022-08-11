@@ -10,13 +10,15 @@ function operate(operator, x, y) {
       return x * y;
     case '/':
       return x / y;
+    default:
+      return y;
   }
 }
 
 let result = 0;
 let operator_buffer = 0;
 let display = 0;
-let chosen_operator = "";
+let chosen_operator = "+";
 
 function concat(button) {
   let value_str = button.value;
@@ -30,42 +32,53 @@ function concat(button) {
       break;
 
     case '+':
+      console.log(chosen_operator);
+      display = operate(chosen_operator, operator_buffer, display);
       operator_buffer = display;
       chosen_operator = '+';
       display = 0;
-      output.innerHTML = display;
+      output.innerHTML = operator_buffer;
       break;
 
 
     case '-':
+      if (operator_buffer != 0) {
+        display = operate(chosen_operator, operator_buffer, display);
+      }
       operator_buffer = display;
       chosen_operator = '-';
       display = 0;
-      output.innerHTML = display;
+      output.innerHTML = operator_buffer;
       break;
 
 
     case '*':
+      if (operator_buffer == 0) {
+        display = operate('*', 1, display);
+      } else {
+        display = operate(chosen_operator, operator_buffer, display);
+      }
       operator_buffer = display;
       chosen_operator = '*';
       display = 0;
-      output.innerHTML = display;
+      output.innerHTML = operator_buffer;
       break;
 
 
     case '/':
+      if (operator_buffer == 0) {
+        display = operate('/', display, 1);
+      } else {
+        display = operate(chosen_operator, display, operator_buffer);
+      }
       operator_buffer = display;
       chosen_operator = '/';
       display = 0;
-      output.innerHTML = display;
+      output.innerHTML = operator_buffer;
       break;
 
     case '=':
-      console.log(chosen_operator);
-      console.log(operator_buffer);
-      console.log(display);
       display = operate(chosen_operator, operator_buffer, display);
-      console.log(display);
       output.innerHTML = display.toString();
       break;
 
