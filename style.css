@@ -1,0 +1,50 @@
+.calculator {
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.output {
+  font-size: 32px;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.numeral-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 450px;
+  border: 1px solid black;
+  gap: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.numeral {
+  height: 90px;
+  width: 70px;
+}
+
+.operator {
+  width: 70px;
+  height: 90px;
+}
+
+.operator-container {
+  width: 100px;
+  height: 450px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
