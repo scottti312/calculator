@@ -18,7 +18,7 @@ function operate(operator, x, y) {
 let result = 0;
 let operator_buffer = 0;
 let display = 0;
-let chosen_operator = "+";
+let chosen_operator = "";
 
 function concat(button) {
   let value_str = button.value;
@@ -79,6 +79,8 @@ function concat(button) {
 
     case '=':
       display = operate(chosen_operator, operator_buffer, display);
+      operator_buffer = 0;
+      chosen_operator = "";
       output.innerHTML = display.toString();
       break;
 
