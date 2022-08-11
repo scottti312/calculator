@@ -17,15 +17,15 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 250px;
   height: 450px;
-  border: 1px solid black;
   gap: 10px;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
+  border: 1px solid black;
 }
 
 .numeral {
@@ -38,13 +38,20 @@
   height: 90px;
 }
 
+.equals {
+  width: 70px;
+  height: 435px;
+  margin: 8px 10px 10px 10px;
+}
+
 .operator-container {
-  width: 100px;
+  width: 70px;
   height: 450px;
-  border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-left: 0px;
+  padding-left: 0px;
 }

@@ -1,31 +1,104 @@
-function add(x, y) {
-  return x + y;
-}
-
-function subtract(x, y) {
-  return x - y;
-}
-
-function multiply(x, y) {
-  return x * y;
-}
-
-function divide(x, y) {
-  return x / y;
-}
-
 function operate(operator, x, y) {
+  x = parseFloat(x);
+  y = parseFloat(y);
   switch (operator) {
     case '+':
-      add(x, y);
-      break;
+      return x + y;
     case '-':
-      subtract(x, y);
-      break;
+      return x - y;
     case '*':
-      multiply(x, y);
-      break;
+      return x * y;
     case '/':
-      divide(x, y);
+      return x / y;
   }
 }
+
+let result = 0;
+let operator_buffer = 0;
+let display = 0;
+let chosen_operator = "";
+
+function concat(button) {
+  let value_str = button.value;
+  let output = document.querySelector('.output');
+  switch (value_str) {
+    case 'clear':
+      result = 0;
+      operator_buffer = 0;
+      display = 0;
+      output.innerHTML = display;
+      break;
+
+    case '+':
+      operator_buffer = display;
+      chosen_operator = '+';
+      display = 0;
+      output.innerHTML = display;
+      break;
+
+
+    case '-':
+      operator_buffer = display;
+      chosen_operator = '-';
+      display = 0;
+      output.innerHTML = display;
+      break;
+
+
+    case '*':
+      operator_buffer = display;
+      chosen_operator = '*';
+      display = 0;
+      output.innerHTML = display;
+      break;
+
+
+    case '/':
+      operator_buffer = display;
+      chosen_operator = '/';
+      display = 0;
+      output.innerHTML = display;
+      break;
+
+    case '=':
+      console.log(chosen_operator);
+      console.log(operator_buffer);
+      console.log(display);
+      display = operate(chosen_operator, operator_buffer, display);
+      console.log(display);
+      output.innerHTML = display.toString();
+      break;
+
+    case 'delete':
+      if (display.toString().length == 1) {
+        display = 0
+        output.innerHTML = display;
+        break;
+      }
+      display = display.toString().slice(0, -1);
+      output.innerHTML = display;
+      break;
+
+    default:
+      if (display == 0) {
+        display = value_str;
+        result = value_str;
+        output.innerHTML = display;
+        break;
+      }
+      if (operator_buffer != 0) {
+        output.innerHTML = operator_buffer;
+      }
+      result += value_str;
+      display += value_str;
+      output.innerHTML = display;
+      break;
+  }
+
+  // if (button.value == "clear") {
+  //   result = "";
+  //   output.innerHTML = "0";
+  //   return
+  // }
+}
+
