@@ -35,7 +35,7 @@ function concat(button) {
 
     case '+':
       if (last_pressed == '+') {
-        break;  
+        break;
       } else {
         display = operate(chosen_operator, operator_buffer, display);
       }
@@ -92,7 +92,7 @@ function concat(button) {
         break;
       }
       display = operate(chosen_operator, operator_buffer, display);
-      operator_buffer=0;
+      operator_buffer = 0;
       chosen_operator = "";
       output.innerHTML = display.toString();
       last_pressed = '=';
