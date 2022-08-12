@@ -28,7 +28,8 @@ body {
 }
 
 .output {
-  font-size: 32px;
+  font-size: 36px;
+  font-family: Roboto;
   padding: 10px;
   margin-bottom: 10px;
   border: 3px solid black;
@@ -52,6 +53,8 @@ body {
 .modifier.clear {
   background-color: rgb(169, 202, 245);
   border-radius: 8px;
+  font-size: 30px;
+  font-family: Roboto;
 }
 
 .modifier.clear:hover {
@@ -65,6 +68,8 @@ body {
 .modifier.delete {
   background-color: rgb(248, 152, 129);
   border-radius: 8px;
+  font-size: 30px;
+  font-family: Roboto;
 }
 
 .modifier.delete:hover {
@@ -113,17 +118,23 @@ body {
 .numeral {
   height: 60px;
   width: 70px;
+  font-size: 30px;
+  font-family: Roboto;
 }
 
 .operator {
   width: 70px;
   height: 60px;
+  font-size: 30px;
+  font-family: Roboto;
 }
 
 .equals {
   width: 70px;
   height: 292px;
   margin: 4px 10px 10px 10px;
+  font-size: 30px;
+  font-family: Roboto;
 }
 
 .footer {
@@ -133,6 +144,7 @@ body {
   padding: 20px;
   width: 100%;
   font-size: 25px;
+  font-family: Roboto;
 }
 
 .fa-github-square {
