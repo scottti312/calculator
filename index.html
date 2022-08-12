@@ -6,38 +6,45 @@
   <title>Calculator</title>
   <script src="./script.js" defer></script>
   <link rel="stylesheet" href="./style.css">
+  <script src="https://kit.fontawesome.com/cbce618375.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div class="calculator">
-    <div class="output">0</div>
-    <div class="clear-delete">
-      <button type="button" onclick="concat(this)" value="clear" class="modifier button clear">clear</button>
-      <button type="button" onclick="concat(this)" value="delete" class="modifier button delete">delete</button>
-    </div>
-    <div class="buttons">
-      <div class="numeral-container button-container">
-        <button type="button" onclick="concat(this)" value="1" class="numeral button">1</button>
-        <button type="button" onclick="concat(this)" value="2" class="numeral button">2</button>
-        <button type="button" onclick="concat(this)" value="3" class="numeral button">3</button>
-        <button type="button" onclick="concat(this)" value="4" class="numeral button">4</button>
-        <button type="button" onclick="concat(this)" value="5" class="numeral button">5</button>
-        <button type="button" onclick="concat(this)" value="6" class="numeral button">6</button>
-        <button type="button" onclick="concat(this)" value="7" class="numeral button">7</button>
-        <button type="button" onclick="concat(this)" value="8" class="numeral button">8</button>
-        <button type="button" onclick="concat(this)" value="9" class="numeral button">9</button>
-        <button type="button" onclick="concat(this)" value="." class="numeral button">.</button>
-        <button type="button" onclick="concat(this)" value="0" class="numeral button zero">0</button>
+  <div class="main">
+    <div class="calculator">
+      <div class="output">0</div>
+      <div class="clear-delete">
+        <button type="button" onclick="concat(this)" value="clear" class="modifier button clear">clear</button>
+        <button type="button" onclick="concat(this)" value="delete" class="modifier button delete">delete</button>
       </div>
-      <div class="operator-container button-container">
-        <button type="button" onclick="concat(this)" value="+" class="operator button">+</button>
-        <button type="button" onclick="concat(this)" value="-" class="operator button">-</button>
-        <button type="button" onclick="concat(this)" value="*" class="operator button">*</button>
-        <button type="button" onclick="concat(this)" value="/" class="operator button">/</button>
+      <div class="buttons">
+        <div class="numeral-container button-container">
+          <button type="button" onclick="concat(this)" value="1" class="numeral button">1</button>
+          <button type="button" onclick="concat(this)" value="2" class="numeral button">2</button>
+          <button type="button" onclick="concat(this)" value="3" class="numeral button">3</button>
+          <button type="button" onclick="concat(this)" value="4" class="numeral button">4</button>
+          <button type="button" onclick="concat(this)" value="5" class="numeral button">5</button>
+          <button type="button" onclick="concat(this)" value="6" class="numeral button">6</button>
+          <button type="button" onclick="concat(this)" value="7" class="numeral button">7</button>
+          <button type="button" onclick="concat(this)" value="8" class="numeral button">8</button>
+          <button type="button" onclick="concat(this)" value="9" class="numeral button">9</button>
+          <button type="button" onclick="concat(this)" value="." class="numeral button">.</button>
+          <button type="button" onclick="concat(this)" value="0" class="numeral button zero">0</button>
+        </div>
+        <div class="operator-container button-container">
+          <button type="button" onclick="concat(this)" value="+" class="operator button">+</button>
+          <button type="button" onclick="concat(this)" value="-" class="operator button">-</button>
+          <button type="button" onclick="concat(this)" value="*" class="operator button">*</button>
+          <button type="button" onclick="concat(this)" value="/" class="operator button">/</button>
+        </div>
+        <button type="button" onclick="concat(this)" value="=" class="equals button">=</button>
       </div>
-      <button type="button" onclick="concat(this)" value="=" class="equals button">=</button>
     </div>
   </div>
+  <div class="footer">Copyright © 2022 Scott Ti
+    <a href="https://github.com/scottti312/calculator"><i class="fa-brands fa-github-square fa-lg"></i></a>
+  </div>
+
 </body>
 
 </html>
