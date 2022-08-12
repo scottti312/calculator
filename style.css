@@ -1,7 +1,20 @@
+:root {
+  --main-color: #d0d0d1;
+  --button-background: #4D4E52
+}
+
 .calculator {
   width: 450px;
   height: 50%;
   padding: 20px;
+  border: 1px solid black;
+  background-color: var(--main-color);
+  border-radius: 12px;
+}
+
+.modifier {
+  width: 190px;
+  height: 70px;
   border: 1px solid black;
 }
 
@@ -9,8 +22,52 @@
   font-size: 32px;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid black;
+  border: 3px solid black;
   text-align: right;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.clear-delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: rgb(180, 180, 180);
+}
+
+.modifier.clear {
+  background-color: rgb(169, 202, 245);
+  border-radius: 8px;
+}
+
+.modifier.clear:hover {
+  background-color: rgb(117, 174, 248);
+}
+
+.modifier.clear:active {
+  background-color: rgb(68, 149, 255);
+}
+
+.modifier.delete {
+  background-color: rgb(248, 152, 129);
+  border-radius: 8px;
+}
+
+.modifier.delete:hover {
+  background-color: rgb(255, 123, 91);
+}
+
+.modifier.delete:active {
+  background-color: rgb(255, 90, 49);
+}
+
+.numeral.button.zero {
+ width: 150px;
 }
 
 .numeral-container {
@@ -19,35 +76,13 @@
   justify-content: center;
   align-items: center;
   width: 250px;
-  height: 450px;
+  height: 300px;
   gap: 10px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  border: 1px solid black;
-}
-
-.numeral {
-  height: 90px;
-  width: 70px;
-}
-
-.operator {
-  width: 70px;
-  height: 90px;
-}
-
-.equals {
-  width: 70px;
-  height: 435px;
-  margin: 8px 10px 10px 10px;
 }
 
 .operator-container {
   width: 70px;
-  height: 450px;
+  height: 300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -56,3 +91,29 @@
   margin-left: 0px;
   padding-left: 0px;
 }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: rgb(180, 180, 180);
+}
+
+.numeral {
+  height: 60px;
+  width: 70px;
+}
+
+.operator {
+  width: 70px;
+  height: 60px;
+}
+
+.equals {
+  width: 70px;
+  height: 292px;
+  margin: 4px 10px 10px 10px;
+}
+
